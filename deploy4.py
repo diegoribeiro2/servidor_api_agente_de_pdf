@@ -4,7 +4,7 @@ import json
 import streamlit as st
 
 AGENT_ID = "agente_pdf"
-ENDPOINT = f"http://localhost:7777/agents/{AGENT_ID}/runs"
+ENDPOINT = f"https://servidor-api-agente-de-pdf.onrender.com/agents/{AGENT_ID}/runs"
 
 # 2 - Conexão com o Agno (SERVER) =========================================
 
@@ -82,4 +82,5 @@ if prompt := st.chat_input("Digite sua mensagem/pergunta..."):
     st.session_state.messages.append({
             "role": "assistant",
             "content": full_response
+
         })
